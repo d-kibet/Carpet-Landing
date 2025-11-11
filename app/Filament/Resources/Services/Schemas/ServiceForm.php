@@ -1,0 +1,158 @@
+<?php
+
+namespace App\Filament\Resources\Services\Schemas;
+
+use Filament\Forms\Components\FileUpload;
+use Filament\Forms\Components\RichEditor;
+use Filament\Forms\Components\Select;
+use Filament\Forms\Components\Textarea;
+use Filament\Forms\Components\TextInput;
+use Filament\Forms\Components\Toggle;
+use Filament\Schemas\Components\Grid;
+use Filament\Schemas\Components\Section;
+use Filament\Schemas\Components\Tabs;
+use Filament\Schemas\Schema;
+
+class ServiceForm
+{
+    public static function configure(Schema $schema): Schema
+    {
+        return $schema
+            ->components([
+                Tabs::make('Service Details')
+                    ->tabs([
+                        Tabs\Tab::make('Basic Info')
+                            ->icon('heroicon-o-information-circle')
+                            ->schema([
+                                Section::make()
+                                    ->schema([
+                                        Grid::make(2)
+                                            ->schema([
+                                                TextInput::make('name')
+                                                    ->required()
+                                                    ->maxLength(255)
+                                                    ->placeholder('Service name')
+                                                    ->live(onBlur: true)
+                                                    ->afterStateUpdated(fn ($state, callable $set) => $set('slug', \Illuminate\Support\Str::slug($state))),
+
+                                                TextInput::make('slug')
+                                                    ->required()
+                                                    ->maxLength(255)
+                                                    ->unique(ignoreRecord: true)
+                                                    ->disabled()
+                                                    ->dehydrated(),
+                                            ]),
+
+                                        TextInput::make('short_description')
+                                            ->maxLength(160)
+                                            ->placeholder('Brief one-line description')
+                                            ->helperText('Shown in service cards')
+                                            ->columnSpanFull(),
+
+                                        RichEditor::make('description')
+                                            ->placeholder('Detailed service description...')
+                                            ->disableToolbarButtons([
+                                                'attachFiles',
+                                                'codeBlock',
+                                            ])
+                                            ->columnSpanFull(),
+                                    ]),
+                            ]),
+
+                        Tabs\Tab::make('Media')
+                            ->icon('heroicon-o-photo')
+                            ->schema([
+                                Section::make()
+                                    ->schema([
+                                        FileUpload::make('featured_image')
+                                            ->label('Featured Image')
+                                            ->image()
+                                            ->imageEditor()
+                                            ->directory('services')
+                                            ->visibility('public')
+                                            ->helperText('Recommended size: 800x600px')
+                                            ->columnSpanFull(),
+
+                                        TextInput::make('icon')
+                                            ->label('Icon Class')
+                                            ->placeholder('heroicon-o-sparkles')
+                                            ->helperText('Heroicon class name for service icon')
+                                            ->prefixIcon('heroicon-o-star'),
+                                    ]),
+                            ]),
+
+                        Tabs\Tab::make('Pricing')
+                            ->icon('heroicon-o-currency-dollar')
+                            ->schema([
+                                Section::make()
+                                    ->schema([
+                                        Grid::make(2)
+                                            ->schema([
+                                                Select::make('pricing_type')
+                                                    ->options([
+                                                        'fixed' => 'Fixed Price',
+                                                        'variable' => 'Variable Price',
+                                                        'quote' => 'Request Quote',
+                                                    ])
+                                                    ->default('variable')
+                                                    ->required()
+                                                    ->live(),
+
+                                                TextInput::make('base_price')
+                                                    ->label('Base Price')
+                                                    ->numeric()
+                                                    ->prefix('$')
+                                                    ->minValue(0)
+                                                    ->step(0.01)
+                                                    ->hidden(fn ($get) => $get('pricing_type') === 'quote')
+                                                    ->helperText('Starting price or fixed price'),
+                                            ]),
+                                    ]),
+                            ]),
+
+                        Tabs\Tab::make('SEO & Settings')
+                            ->icon('heroicon-o-cog-6-tooth')
+                            ->schema([
+                                Section::make('SEO')
+                                    ->schema([
+                                        TextInput::make('seo_title')
+                                            ->label('SEO Title')
+                                            ->maxLength(60)
+                                            ->placeholder('Custom page title for search engines')
+                                            ->helperText('Leave empty to use service name')
+                                            ->columnSpanFull(),
+
+                                        Textarea::make('seo_description')
+                                            ->label('SEO Description')
+                                            ->maxLength(160)
+                                            ->rows(3)
+                                            ->placeholder('Meta description for search engines')
+                                            ->helperText('Recommended: 150-160 characters')
+                                            ->columnSpanFull(),
+                                    ]),
+
+                                Section::make('Display Settings')
+                                    ->schema([
+                                        Grid::make(2)
+                                            ->schema([
+                                                TextInput::make('display_order')
+                                                    ->label('Display Order')
+                                                    ->required()
+                                                    ->numeric()
+                                                    ->default(0)
+                                                    ->minValue(0)
+                                                    ->helperText('Lower numbers appear first'),
+
+                                                Toggle::make('is_active')
+                                                    ->label('Active')
+                                                    ->helperText('Show on website')
+                                                    ->default(true)
+                                                    ->inline(false),
+                                            ]),
+                                    ]),
+                            ]),
+                    ])
+                    ->columnSpanFull(),
+            ]);
+    }
+}

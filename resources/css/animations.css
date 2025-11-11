@@ -1,0 +1,279 @@
+/* Water and Bubble Animations */
+
+/* Floating bubbles animation */
+@keyframes float-up {
+    0% {
+        transform: translateY(0) translateX(0) scale(1);
+        opacity: 0;
+    }
+    10% {
+        opacity: 0.8;
+    }
+    90% {
+        opacity: 0.8;
+    }
+    100% {
+        transform: translateY(-100vh) translateX(50px) scale(0.8);
+        opacity: 0;
+    }
+}
+
+@keyframes float-up-reverse {
+    0% {
+        transform: translateY(0) translateX(0) scale(1);
+        opacity: 0;
+    }
+    10% {
+        opacity: 0.6;
+    }
+    90% {
+        opacity: 0.6;
+    }
+    100% {
+        transform: translateY(-100vh) translateX(-50px) scale(0.6);
+        opacity: 0;
+    }
+}
+
+/* Water wave animation */
+@keyframes wave {
+    0% {
+        transform: translateX(0) translateZ(0) scaleY(1);
+    }
+    50% {
+        transform: translateX(-25%) translateZ(0) scaleY(0.8);
+    }
+    100% {
+        transform: translateX(-50%) translateZ(0) scaleY(1);
+    }
+}
+
+/* Ripple effect */
+@keyframes ripple {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(2);
+        opacity: 0;
+    }
+}
+
+/* Shimmer effect for clean carpets */
+@keyframes shimmer {
+    0% {
+        background-position: -1000px 0;
+    }
+    100% {
+        background-position: 1000px 0;
+    }
+}
+
+/* Washing machine rotation */
+@keyframes rotate-drum {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Gentle float animation */
+@keyframes gentle-float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+/* Fade in up animation */
+@keyframes fade-in-up {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Slide in from left */
+@keyframes slide-in-left {
+    from {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Slide in from right */
+@keyframes slide-in-right {
+    from {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Pulse animation for CTA buttons */
+@keyframes pulse-glow {
+    0%, 100% {
+        box-shadow: 0 0 20px rgba(255, 120, 60, 0.4);
+    }
+    50% {
+        box-shadow: 0 0 40px rgba(255, 120, 60, 0.8);
+    }
+}
+
+/* Bubble container */
+.bubble-container {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* Individual bubbles */
+.bubble {
+    position: absolute;
+    bottom: -100px;
+    background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.3));
+    border-radius: 50%;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.bubble:nth-child(1) {
+    left: 10%;
+    width: 60px;
+    height: 60px;
+    animation: float-up 8s infinite ease-in;
+    animation-delay: 0s;
+}
+
+.bubble:nth-child(2) {
+    left: 25%;
+    width: 40px;
+    height: 40px;
+    animation: float-up-reverse 10s infinite ease-in;
+    animation-delay: 2s;
+}
+
+.bubble:nth-child(3) {
+    left: 40%;
+    width: 80px;
+    height: 80px;
+    animation: float-up 12s infinite ease-in;
+    animation-delay: 1s;
+}
+
+.bubble:nth-child(4) {
+    left: 55%;
+    width: 50px;
+    height: 50px;
+    animation: float-up-reverse 9s infinite ease-in;
+    animation-delay: 3s;
+}
+
+.bubble:nth-child(5) {
+    left: 70%;
+    width: 70px;
+    height: 70px;
+    animation: float-up 11s infinite ease-in;
+    animation-delay: 1.5s;
+}
+
+.bubble:nth-child(6) {
+    left: 85%;
+    width: 45px;
+    height: 45px;
+    animation: float-up-reverse 10s infinite ease-in;
+    animation-delay: 0.5s;
+}
+
+/* Water wave overlay */
+.water-wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 200%;
+    height: 100px;
+    background: linear-gradient(90deg,
+        transparent 0%,
+        rgba(59, 130, 246, 0.1) 25%,
+        transparent 50%,
+        rgba(59, 130, 246, 0.1) 75%,
+        transparent 100%
+    );
+    animation: wave 8s linear infinite;
+    pointer-events: none;
+}
+
+/* Shimmer overlay for clean effect */
+.shimmer-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent 0%,
+        rgba(255, 255, 255, 0.3) 50%,
+        transparent 100%
+    );
+    background-size: 1000px 100%;
+    animation: shimmer 3s infinite;
+    pointer-events: none;
+}
+
+/* Utility classes for animations */
+.animate-fade-in-up {
+    animation: fade-in-up 0.8s ease-out forwards;
+}
+
+.animate-slide-in-left {
+    animation: slide-in-left 0.8s ease-out forwards;
+}
+
+.animate-slide-in-right {
+    animation: slide-in-right 0.8s ease-out forwards;
+}
+
+.animate-gentle-float {
+    animation: gentle-float 3s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+    animation: pulse-glow 2s ease-in-out infinite;
+}
+
+/* Stagger animation delays */
+.delay-100 { animation-delay: 100ms; }
+.delay-200 { animation-delay: 200ms; }
+.delay-300 { animation-delay: 300ms; }
+.delay-400 { animation-delay: 400ms; }
+.delay-500 { animation-delay: 500ms; }
+
+/* Responsive animations */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
