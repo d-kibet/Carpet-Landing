@@ -4,10 +4,10 @@
             <!-- Company Info -->
             <div class="lg:col-span-2">
                 <div class="flex items-center gap-3 mb-4">
-                    <div class="w-12 h-12 bg-primary-600 rounded-lg flex items-center justify-center">
-                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                        </svg>
+                    <div class="w-12 h-12 sm:w-14 sm:h-14 bg-white rounded-lg flex items-center justify-center p-1">
+                        <img src="{{ asset('images/Raha_logo.jpg') }}"
+                             alt="Raha Express Logo"
+                             class="w-full h-full object-contain">
                     </div>
                     <div>
                         <h2 class="text-xl font-bold text-white">RAHA EXPRESS</h2>

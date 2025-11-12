@@ -4,14 +4,14 @@
             <!-- Logo -->
             <div class="flex-shrink-0">
                 <a href="/" class="flex items-center gap-3">
-                    <div class="w-12 h-12 bg-primary-600 rounded-lg flex items-center justify-center">
-                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                        </svg>
+                    <div class="w-12 h-12 sm:w-14 sm:h-14 flex items-center justify-center">
+                        <img src="{{ asset('images/Raha_logo.jpg') }}"
+                             alt="Raha Express Logo"
+                             class="w-full h-full object-contain">
                     </div>
                     <div>
-                        <h1 class="text-xl font-bold text-primary-700">RAHA EXPRESS</h1>
-                        <p class="text-xs text-gray-600">Automated Carpet Wash</p>
+                        <h1 class="text-lg sm:text-xl font-bold text-primary-700">RAHA EXPRESS</h1>
+                        <p class="text-xs text-gray-600 hidden sm:block">Automated Carpet Wash</p>
                     </div>
                 </a>
             </div>
