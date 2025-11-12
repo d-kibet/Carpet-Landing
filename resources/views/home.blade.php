@@ -1,4 +1,7 @@
 <x-layout.app-layout>
+    <x-slot:title>Raha Express Carpet Wash - Professional Carpet Cleaning in Nairobi</x-slot:title>
+    <x-slot:description>Professional automated carpet cleaning in Nairobi with 24-hour turnaround. Expert care, fair pricing, and state-of-the-art machinery. Serving Lang'ata, Mombasa, and Eldoret.</x-slot:description>
+
     <!-- Hero Section with Animated Water Effects -->
     <section class="relative bg-gradient-to-br from-primary-600 to-primary-800 text-white overflow-hidden min-h-[500px] md:min-h-[600px]">
         <!-- Background Image Overlay for Carpet Washing Machinery -->

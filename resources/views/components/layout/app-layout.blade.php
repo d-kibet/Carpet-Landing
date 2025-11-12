@@ -10,6 +10,11 @@
     <title>{{ $title ?? 'Raha Express Automated Carpet Wash - Professional Carpet Cleaning in Nairobi' }}</title>
     <meta name="description" content="{{ $description ?? 'Professional carpet cleaning services in Nairobi with automated machinery. Quick 24-hour turnaround. Serving Lang\'ata and expanding to Mombasa & Eldoret.' }}">
 
+    <!-- Favicon -->
+    <link rel="icon" type="image/jpeg" href="{{ asset('images/Raha_logo.jpg') }}">
+    <link rel="shortcut icon" type="image/jpeg" href="{{ asset('images/Raha_logo.jpg') }}">
+    <link rel="apple-touch-icon" href="{{ asset('images/Raha_logo.jpg') }}">
+
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=inter:400,500,600,700" rel="stylesheet" />
