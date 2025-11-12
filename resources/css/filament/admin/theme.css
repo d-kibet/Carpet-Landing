@@ -50,6 +50,28 @@
         0 0 0 1px rgba(255, 255, 255, 0.5);
 }
 
+/* Login form specific input styling */
+.fi-simple-page input[type="email"],
+.fi-simple-page input[type="password"] {
+    color: #111827 !important;
+    background-color: #ffffff !important;
+    border: 2px solid #e5e7eb !important;
+    padding: 0.75rem 1rem !important;
+    font-size: 1rem !important;
+}
+
+.fi-simple-page input[type="email"]:focus,
+.fi-simple-page input[type="password"]:focus {
+    border-color: #ff7f50 !important;
+    box-shadow: 0 0 0 3px rgba(255, 127, 80, 0.2) !important;
+    outline: none !important;
+}
+
+.fi-simple-page label {
+    color: #374151 !important;
+    font-weight: 600 !important;
+}
+
 /* Main admin panel background - Warm peachy gradient */
 .fi-layout {
     background: linear-gradient(180deg,
@@ -215,12 +237,40 @@
     color: oklch(0.40 0.12 32);
 }
 
+/* Input styling - Ensure visible text */
+.fi-input,
+.fi-select,
+.fi-textarea,
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"],
+input[type="number"],
+input[type="url"],
+textarea,
+select {
+    color: #1f2937 !important;
+    background-color: #ffffff !important;
+    border: 1px solid #d1d5db !important;
+}
+
 /* Input focus states - Warm orange glow */
 .fi-input:focus,
 .fi-select:focus,
-.fi-textarea:focus {
-    border-color: oklch(0.60 0.18 35);
-    box-shadow: 0 0 0 3px rgba(255, 120, 60, 0.15);
+.fi-textarea:focus,
+input:focus,
+textarea:focus,
+select:focus {
+    border-color: oklch(0.60 0.18 35) !important;
+    box-shadow: 0 0 0 3px rgba(255, 120, 60, 0.15) !important;
+    color: #111827 !important;
+}
+
+/* Input placeholder text */
+.fi-input::placeholder,
+input::placeholder,
+textarea::placeholder {
+    color: #9ca3af !important;
 }
 
 /* Badge improvements - Warm tones */
