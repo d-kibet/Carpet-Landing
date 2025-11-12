@@ -2,7 +2,7 @@
 
 namespace Database\Seeders;
 
-use App\Models\Faq;
+use App\Models\FAQ;
 use App\Models\GalleryMedia;
 use App\Models\Location;
 use App\Models\PricingItem;
@@ -181,7 +181,7 @@ class RahaCarpetWashSeeder extends Seeder
         ]);
 
         // Create FAQs
-        Faq::create([
+        FAQ::create([
             'question' => 'How long does the carpet cleaning process take?',
             'answer' => 'Our standard process includes a 24-hour drying period. You can drop off your carpet and pick it up the next day, fully cleaned and dried.',
             'category' => 'General',
@@ -189,7 +189,7 @@ class RahaCarpetWashSeeder extends Seeder
             'display_order' => 1,
         ]);
 
-        Faq::create([
+        FAQ::create([
             'question' => 'What size carpets do you clean?',
             'answer' => 'We clean carpets of all sizes, from small bedroom carpets to large commercial carpets. Our pricing is based on carpet size and condition.',
             'category' => 'Services',
@@ -197,7 +197,7 @@ class RahaCarpetWashSeeder extends Seeder
             'display_order' => 2,
         ]);
 
-        Faq::create([
+        FAQ::create([
             'question' => 'Do you offer pick-up and delivery services?',
             'answer' => 'Currently, we operate on a drop-off and pick-up basis at our Lang\'ata location. Pick-up and delivery services may be available for large orders.',
             'category' => 'Services',
@@ -205,7 +205,7 @@ class RahaCarpetWashSeeder extends Seeder
             'display_order' => 3,
         ]);
 
-        Faq::create([
+        FAQ::create([
             'question' => 'What cleaning methods do you use?',
             'answer' => 'We use state-of-the-art automated machinery that deep cleans carpets using eco-friendly detergents. Our process is safe for all carpet types and removes dirt, stains, and odors.',
             'category' => 'Process',
@@ -213,7 +213,7 @@ class RahaCarpetWashSeeder extends Seeder
             'display_order' => 4,
         ]);
 
-        Faq::create([
+        FAQ::create([
             'question' => 'What are your operating hours?',
             'answer' => 'We are open 7 days a week from 6:30 AM to 8:00 PM at our Nairobi Lang\'ata location.',
             'category' => 'General',
@@ -221,7 +221,7 @@ class RahaCarpetWashSeeder extends Seeder
             'display_order' => 5,
         ]);
 
-        Faq::create([
+        FAQ::create([
             'question' => 'Do you handle pet stains and odors?',
             'answer' => 'Yes! We offer specialized treatment for pet-related stains and odors. Our automated cleaning process effectively removes pet hair, stains, and odors.',
             'category' => 'Services',

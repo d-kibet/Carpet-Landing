@@ -126,7 +126,7 @@
                     <h2 class="text-3xl font-bold text-gray-900 mb-6">Frequently Asked Questions</h2>
 
                     @php
-                        $faqs = \App\Models\Faq::where('is_active', true)
+                        $faqs = \App\Models\FAQ::where('is_active', true)
                             ->orderBy('display_order')
                             ->limit(5)
                             ->get();
