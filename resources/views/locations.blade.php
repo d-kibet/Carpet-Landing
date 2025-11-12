@@ -60,11 +60,11 @@
                             </div>
 
                             <!-- Location Details -->
-                            <div class="p-8">
-                                <h3 class="text-3xl font-bold text-gray-900 mb-4">{{ $location->name }}</h3>
+                            <div class="p-6 sm:p-8">
+                                <h3 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">{{ $location->name }}</h3>
 
                                 @if($location->description)
-                                    <p class="text-gray-600 mb-6">{{ $location->description }}</p>
+                                    <p class="text-sm sm:text-base text-gray-600 mb-6">{{ $location->description }}</p>
                                 @endif
 
                                 <!-- Address -->
@@ -75,8 +75,8 @@
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
                                         </svg>
                                         <div>
-                                            <p class="font-medium text-gray-900">Address</p>
-                                            <p class="text-gray-600">{{ $location->address }}, {{ $location->city }}</p>
+                                            <p class="font-medium text-gray-900 text-sm sm:text-base">Address</p>
+                                            <p class="text-gray-600 text-sm sm:text-base">{{ $location->address }}, {{ $location->city }}</p>
                                         </div>
                                     </div>
 
@@ -86,8 +86,8 @@
                                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
                                             </svg>
                                             <div>
-                                                <p class="font-medium text-gray-900">Phone</p>
-                                                <a href="tel:{{ $location->phone }}" class="text-{{ $loop->even ? 'secondary' : 'primary' }}-600 hover:underline">
+                                                <p class="font-medium text-gray-900 text-sm sm:text-base">Phone</p>
+                                                <a href="tel:{{ $location->phone }}" class="text-{{ $loop->even ? 'secondary' : 'primary' }}-600 hover:underline text-sm sm:text-base">
                                                     {{ $location->phone }}
                                                 </a>
                                             </div>

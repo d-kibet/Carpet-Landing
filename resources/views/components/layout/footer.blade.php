@@ -1,6 +1,6 @@
 <footer class="bg-gray-900 text-gray-300">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
             <!-- Company Info -->
             <div class="lg:col-span-2">
                 <div class="flex items-center gap-3 mb-4">
@@ -30,8 +30,8 @@
 
             <!-- Quick Links -->
             <div>
-                <h3 class="text-white font-semibold text-lg mb-4">Quick Links</h3>
-                <ul class="space-y-3">
+                <h3 class="text-white font-semibold text-base sm:text-lg mb-4">Quick Links</h3>
+                <ul class="space-y-2 sm:space-y-3 text-sm sm:text-base">
                     <li><a href="/" class="hover:text-accent-400 transition-colors">Home</a></li>
                     <li><a href="/services" class="hover:text-accent-400 transition-colors">Services</a></li>
                     <li><a href="/pricing" class="hover:text-accent-400 transition-colors">Pricing</a></li>
@@ -43,7 +43,7 @@
 
             <!-- Contact & Hours -->
             <div>
-                <h3 class="text-white font-semibold text-lg mb-4">Visit Us</h3>
+                <h3 class="text-white font-semibold text-base sm:text-lg mb-4">Visit Us</h3>
                 <div class="space-y-4">
                     <div>
                         <p class="text-sm text-gray-400 mb-1">Nairobi Location:</p>
@@ -68,8 +68,8 @@
         </div>
 
         <!-- Bottom Bar -->
-        <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-            <p class="text-gray-400 text-sm">
+        <div class="border-t border-gray-800 mt-8 sm:mt-12 pt-6 sm:pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left">
+            <p class="text-gray-400 text-xs sm:text-sm">
                 &copy; {{ date('Y') }} Raha Express Automated Carpet Wash. All rights reserved.
             </p>
             <div class="flex items-center gap-6 text-sm">

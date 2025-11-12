@@ -3,7 +3,7 @@
     <x-slot name="description">{{ $service->seo_description ?? $service->short_description }}</x-slot>
 
     <!-- Service Hero with Water Animation -->
-    <section class="relative bg-gradient-to-br from-primary-600 via-primary-700 to-primary-900 text-white py-24 overflow-hidden min-h-[500px]">
+    <section class="relative bg-gradient-to-br from-primary-600 via-primary-700 to-primary-900 text-white py-16 sm:py-24 overflow-hidden min-h-[450px] sm:min-h-[500px]">
         <!-- Animated Bubbles Container -->
         <div class="bubble-container">
             <div class="bubble"></div>
@@ -32,10 +32,10 @@
                     </svg>
                     <span class="text-primary-100">{{ $service->name }}</span>
                 </div>
-                <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight animate-fade-in-up delay-200">
+                <h1 class="text-3xl sm:text-5xl md:text-7xl font-bold mb-4 sm:mb-6 leading-tight animate-fade-in-up delay-200">
                     {{ $service->name }}
                 </h1>
-                <p class="text-xl md:text-2xl mb-8 text-primary-100 leading-relaxed animate-fade-in-up delay-300">
+                <p class="text-lg sm:text-xl md:text-2xl mb-6 sm:mb-8 text-primary-100 leading-relaxed animate-fade-in-up delay-300">
                     {{ $service->short_description }}
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4 animate-fade-in-up delay-400">

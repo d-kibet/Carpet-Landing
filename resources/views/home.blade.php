@@ -1,6 +1,6 @@
 <x-layout.app-layout>
     <!-- Hero Section with Animated Water Effects -->
-    <section class="relative bg-gradient-to-br from-primary-600 to-primary-800 text-white overflow-hidden min-h-[600px]">
+    <section class="relative bg-gradient-to-br from-primary-600 to-primary-800 text-white overflow-hidden min-h-[500px] md:min-h-[600px]">
         <!-- Background Image Overlay for Carpet Washing Machinery -->
         @php
             $heroBackground = $settings['hero_background_image'] ?? null;
@@ -29,13 +29,13 @@
         <div class="water-wave"></div>
 
         <!-- Hero Content -->
-        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32 z-10">
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 md:py-32 z-10">
             <div class="max-w-3xl">
-                <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight animate-fade-in-up">
+                <h1 class="text-3xl sm:text-4xl md:text-6xl font-bold mb-4 sm:mb-6 leading-tight animate-fade-in-up">
                     Professional Carpet Cleaning with
                     <span class="text-accent-300 animate-gentle-float inline-block">24-Hour Turnaround</span>
                 </h1>
-                <p class="text-xl md:text-2xl mb-8 text-primary-100 animate-fade-in-up delay-200">
+                <p class="text-lg sm:text-xl md:text-2xl mb-6 sm:mb-8 text-primary-100 animate-fade-in-up delay-200">
                     State-of-the-art automated machinery. Expert care. Carpets that look brand new.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4 animate-fade-in-up delay-300">

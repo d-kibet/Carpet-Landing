@@ -3,14 +3,14 @@
     <x-slot:description>Transparent pricing for carpet cleaning and laundry services. No hidden fees. Get a free quote today!</x-slot:description>
 
     <!-- Hero Section -->
-    <section class="relative bg-gradient-to-br from-primary-600 via-primary-700 to-secondary-700 text-white py-20">
+    <section class="relative bg-gradient-to-br from-primary-600 via-primary-700 to-secondary-700 text-white py-12 sm:py-20">
         <div class="absolute inset-0 opacity-10">
             <div class="absolute inset-0" style="background-image: url('data:image/svg+xml,%3Csvg width=&quot;60&quot; height=&quot;60&quot; viewBox=&quot;0 0 60 60&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Cg fill=&quot;none&quot; fill-rule=&quot;evenodd&quot;%3E%3Cg fill=&quot;%23ffffff&quot; fill-opacity=&quot;0.4&quot;%3E%3Cpath d=&quot;M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z&quot;/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');"></div>
         </div>
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="text-center">
-                <h1 class="text-5xl font-bold mb-6">Transparent Pricing</h1>
-                <p class="text-xl text-primary-100 max-w-3xl mx-auto">
+                <h1 class="text-3xl sm:text-5xl font-bold mb-4 sm:mb-6">Transparent Pricing</h1>
+                <p class="text-base sm:text-xl text-primary-100 max-w-3xl mx-auto">
                     No hidden fees. No surprises. Just clean carpets and competitive prices.
                 </p>
             </div>
@@ -20,9 +20,9 @@
     <!-- Pricing Calculator Section -->
     <section class="py-16 bg-gradient-to-b from-white to-stone-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <h2 class="text-4xl font-bold text-gray-900 mb-4">Carpet Cleaning Calculator</h2>
-                <p class="text-lg text-gray-600">Calculate your carpet cleaning cost instantly</p>
+            <div class="text-center mb-8 sm:mb-12">
+                <h2 class="text-2xl sm:text-4xl font-bold text-gray-900 mb-4">Carpet Cleaning Calculator</h2>
+                <p class="text-base sm:text-lg text-gray-600">Calculate your carpet cleaning cost instantly</p>
             </div>
 
             <div class="max-w-3xl mx-auto">
@@ -43,13 +43,13 @@
                 @foreach(\App\Models\Service::where('is_active', true)->orderBy('display_order')->with('pricingItems')->get() as $service)
                     <div class="bg-gradient-to-br from-white to-stone-50 rounded-2xl shadow-xl overflow-hidden border border-gray-100">
                         <!-- Service Header -->
-                        <div class="bg-gradient-to-r from-{{ $loop->even ? 'secondary' : 'primary' }}-600 to-{{ $loop->even ? 'secondary' : 'primary' }}-700 text-white p-8">
-                            <h3 class="text-3xl font-bold mb-3">{{ $service->name }}</h3>
-                            <p class="text-{{ $loop->even ? 'secondary' : 'primary' }}-100">{{ $service->short_description }}</p>
+                        <div class="bg-gradient-to-r from-{{ $loop->even ? 'secondary' : 'primary' }}-600 to-{{ $loop->even ? 'secondary' : 'primary' }}-700 text-white p-6 sm:p-8">
+                            <h3 class="text-2xl sm:text-3xl font-bold mb-3">{{ $service->name }}</h3>
+                            <p class="text-sm sm:text-base text-{{ $loop->even ? 'secondary' : 'primary' }}-100">{{ $service->short_description }}</p>
                         </div>
 
                         <!-- Pricing Items -->
-                        <div class="p-8">
+                        <div class="p-6 sm:p-8">
                             @if($service->pricingItems->count() > 0)
                                 <div class="space-y-4">
                                     @foreach($service->pricingItems->where('is_addon', false) as $item)

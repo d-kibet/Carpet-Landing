@@ -3,14 +3,14 @@
     <x-slot:description>Request a free quote for our carpet cleaning and laundry services. We'll respond within 24 hours with a customized estimate.</x-slot:description>
 
     <!-- Hero Section -->
-    <section class="relative bg-gradient-to-br from-primary-600 via-primary-700 to-secondary-700 text-white py-24">
+    <section class="relative bg-gradient-to-br from-primary-600 via-primary-700 to-secondary-700 text-white py-12 sm:py-24">
         <div class="absolute inset-0 opacity-10">
             <div class="absolute inset-0" style="background-image: url('data:image/svg+xml,%3Csvg width=&quot;60&quot; height=&quot;60&quot; viewBox=&quot;0 0 60 60&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Cg fill=&quot;none&quot; fill-rule=&quot;evenodd&quot;%3E%3Cg fill=&quot;%23ffffff&quot; fill-opacity=&quot;0.4&quot;%3E%3Cpath d=&quot;M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z&quot;/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');"></div>
         </div>
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="text-center">
-                <h1 class="text-5xl font-bold mb-6">Get Your Free Quote</h1>
-                <p class="text-xl text-primary-100 max-w-3xl mx-auto">
+                <h1 class="text-3xl sm:text-5xl font-bold mb-4 sm:mb-6">Get Your Free Quote</h1>
+                <p class="text-base sm:text-xl text-primary-100 max-w-3xl mx-auto">
                     Tell us about your needs and we'll provide a detailed quote within 24 hours. No obligation required.
                 </p>
             </div>
@@ -20,10 +20,10 @@
     <!-- Quote Form Section -->
     <section class="py-16 bg-gradient-to-b from-white to-stone-50">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="bg-white rounded-2xl shadow-xl p-8 md:p-12">
-                <div class="mb-8">
-                    <h2 class="text-3xl font-bold text-gray-900 mb-4">Request a Quote</h2>
-                    <p class="text-gray-600">Fill out the form below and our team will get back to you shortly with a customized quote.</p>
+            <div class="bg-white rounded-2xl shadow-xl p-6 sm:p-8 md:p-12">
+                <div class="mb-6 sm:mb-8">
+                    <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">Request a Quote</h2>
+                    <p class="text-sm sm:text-base text-gray-600">Fill out the form below and our team will get back to you shortly with a customized quote.</p>
                 </div>
 
                 @if(session('success'))
@@ -35,7 +35,7 @@
                     </div>
                 @endif
 
-                <form method="POST" action="{{ route('quote.store') }}" class="space-y-6">
+                <form method="POST" action="{{ route('quote.store') }}" class="space-y-4 sm:space-y-6">
                     @csrf
 
                     <!-- Personal Information -->

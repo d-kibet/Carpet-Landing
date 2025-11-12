@@ -65,7 +65,7 @@
 /* Custom Component Styles */
 @layer components {
     .btn {
-        @apply px-6 py-3 rounded-lg font-medium transition-all duration-200 inline-flex items-center justify-center;
+        @apply px-6 py-3 rounded-lg font-medium transition-all duration-200 inline-flex items-center justify-center min-h-[44px] touch-manipulation;
     }
 
     .btn-primary {
@@ -103,5 +103,36 @@
 
     .gradient-evening-night-dark {
         background: linear-gradient(135deg, #003366 0%, #005AA7 100%);
+    }
+}
+
+/* Mobile Optimizations */
+@layer utilities {
+    /* Ensure all interactive elements are touch-friendly (min 44x44px) */
+    a, button, [role="button"], input[type="submit"], input[type="button"] {
+        @apply touch-manipulation;
+    }
+
+    /* Prevent text size adjustment on orientation change */
+    html {
+        -webkit-text-size-adjust: 100%;
+        text-size-adjust: 100%;
+    }
+
+    /* Smooth scrolling for better mobile experience */
+    @media (prefers-reduced-motion: no-preference) {
+        html {
+            scroll-behavior: smooth;
+        }
+    }
+
+    /* Improve tap highlight color */
+    * {
+        -webkit-tap-highlight-color: rgba(0, 102, 204, 0.1);
+    }
+
+    /* Optimize images for mobile */
+    img {
+        @apply max-w-full h-auto;
     }
 }
