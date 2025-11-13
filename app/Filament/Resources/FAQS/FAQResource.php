@@ -18,6 +18,8 @@ class FAQResource extends Resource
 {
     protected static ?string $model = FAQ::class;
 
+    protected static ?string $slug = 'faqs';
+
     protected static BackedEnum|string|null $navigationIcon = 'heroicon-o-question-mark-circle';
 
     protected static ?string $navigationLabel = 'FAQs';
