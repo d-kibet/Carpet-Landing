@@ -6,8 +6,18 @@ use Illuminate\Database\Eloquent\Model;
 
 class FAQ extends Model
 {
+    /**
+     * The table associated with the model.
+     *
+     * @var string
+     */
     protected $table = 'faqs';
 
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var array<int, string>
+     */
     protected $fillable = [
         'question',
         'answer',
@@ -16,6 +26,11 @@ class FAQ extends Model
         'is_active',
     ];
 
+    /**
+     * Get the attributes that should be cast.
+     *
+     * @return array<string, string>
+     */
     protected function casts(): array
     {
         return [
@@ -24,11 +39,17 @@ class FAQ extends Model
         ];
     }
 
+    /**
+     * Scope a query to only include active FAQs.
+     */
     public function scopeActive($query)
     {
         return $query->where('is_active', true);
     }
 
+    /**
+     * Scope a query to filter by category.
+     */
     public function scopeByCategory($query, ?string $category)
     {
         if ($category) {

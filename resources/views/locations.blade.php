@@ -185,6 +185,21 @@
         </div>
     </section>
 
+    <!-- Interactive Map Section -->
+    <section class="py-16 bg-gradient-to-b from-stone-50 to-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Visit Our Locations</h2>
+                <p class="text-lg text-gray-600">Find us on the map</p>
+            </div>
+
+            <!-- Map Container -->
+            <div class="bg-white rounded-2xl shadow-xl overflow-hidden">
+                <div id="locationMap" class="w-full h-[500px] md:h-[600px]"></div>
+            </div>
+        </div>
+    </section>
+
     <!-- Service Area Map -->
     <section class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -247,4 +262,123 @@
             </div>
         </div>
     </section>
+
+    <!-- Leaflet CSS and JS -->
+    @push('styles')
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+          integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+          crossorigin=""/>
+    <style>
+        .leaflet-popup-content-wrapper {
+            border-radius: 12px;
+        }
+        .leaflet-popup-content {
+            margin: 16px;
+            min-width: 200px;
+        }
+    </style>
+    @endpush
+
+    @push('scripts')
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+            integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+            crossorigin=""></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize map centered on Kenya
+            const map = L.map('locationMap').setView([-1.2921, 36.8219], 6);
+
+            // Add OpenStreetMap tiles
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+                maxZoom: 19
+            }).addTo(map);
+
+            // Define locations with coordinates
+            const locations = [
+                {
+                    name: 'Nairobi - Lang\'ata',
+                    lat: -1.3523,
+                    lng: 36.7176,
+                    status: 'open',
+                    address: 'Lang\'ata, Nairobi',
+                    phone: '0114440444',
+                    hours: 'Mon-Sat: 8:00 AM - 6:00 PM',
+                    mapsUrl: '{{ $locations->firstWhere(\'city\', \'Nairobi\')?->google_maps_url ?? \'#\' }}'
+                },
+                {
+                    name: 'Mombasa - Nyali',
+                    lat: -4.0435,
+                    lng: 39.7212,
+                    status: 'coming',
+                    address: 'Nyali, Mombasa',
+                    phone: 'Coming Soon',
+                    hours: 'Opening Soon',
+                    mapsUrl: '#'
+                },
+                {
+                    name: 'Eldoret',
+                    lat: 0.5143,
+                    lng: 35.2698,
+                    status: 'coming',
+                    address: 'Eldoret, Kenya',
+                    phone: 'Coming Soon',
+                    hours: 'Opening Soon',
+                    mapsUrl: '#'
+                }
+            ];
+
+            // Custom icons
+            const greenIcon = L.icon({
+                iconUrl: 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iNDgiIHZpZXdCb3g9IjAgMCAzMiA0OCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMTYgMEMxMC40NzcgMCA2IDQuNDc3IDYgMTBDNiAxNS41MjMgMTYgMzAgMTYgMzBDMTYgMzAgMjYgMTUuNTIzIDI2IDEwQzI2IDQuNDc3IDIxLjUyMyAwIDE2IDBaIiBmaWxsPSIjMTBiOTgxIi8+PGNpcmNsZSBjeD0iMTYiIGN5PSIxMCIgcj0iNCIgZmlsbD0id2hpdGUiLz48L3N2Zz4=',
+                iconSize: [32, 48],
+                iconAnchor: [16, 48],
+                popupAnchor: [0, -48]
+            });
+
+            const orangeIcon = L.icon({
+                iconUrl: 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iNDgiIHZpZXdCb3g9IjAgMCAzMiA0OCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMTYgMEMxMC40NzcgMCA2IDQuNDc3IDYgMTBDNiAxNS41MjMgMTYgMzAgMTYgMzBDMTYgMzAgMjYgMTUuNTIzIDI2IDEwQzI2IDQuNDc3IDIxLjUyMyAwIDE2IDBaIiBmaWxsPSIjZmY3ZjUwIi8+PGNpcmNsZSBjeD0iMTYiIGN5PSIxMCIgcj0iNCIgZmlsbD0id2hpdGUiLz48L3N2Zz4=',
+                iconSize: [32, 48],
+                iconAnchor: [16, 48],
+                popupAnchor: [0, -48]
+            });
+
+            // Add markers for each location
+            locations.forEach(location => {
+                const icon = location.status === 'open' ? greenIcon : orangeIcon;
+                const marker = L.marker([location.lat, location.lng], { icon: icon }).addTo(map);
+
+                const statusBadge = location.status === 'open'
+                    ? '<span class="inline-block bg-green-500 text-white text-xs font-semibold px-3 py-1 rounded-full">Now Open</span>'
+                    : '<span class="inline-block bg-orange-500 text-white text-xs font-semibold px-3 py-1 rounded-full">Coming Soon</span>';
+
+                const directionsButton = location.mapsUrl !== '#'
+                    ? `<a href="${location.mapsUrl}" target="_blank" class="inline-block mt-3 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium px-4 py-2 rounded-lg transition-colors">Get Directions</a>`
+                    : '';
+
+                const popupContent = `
+                    <div class="text-center">
+                        <h3 class="font-bold text-lg text-gray-900 mb-2">${location.name}</h3>
+                        ${statusBadge}
+                        <div class="mt-3 text-left text-sm text-gray-600 space-y-1">
+                            <p><strong>Address:</strong> ${location.address}</p>
+                            <p><strong>Phone:</strong> ${location.phone}</p>
+                            <p><strong>Hours:</strong> ${location.hours}</p>
+                        </div>
+                        ${directionsButton}
+                    </div>
+                `;
+
+                marker.bindPopup(popupContent, {
+                    maxWidth: 300,
+                    className: 'custom-popup'
+                });
+            });
+
+            // Fit bounds to show all markers
+            const bounds = L.latLngBounds(locations.map(loc => [loc.lat, loc.lng]));
+            map.fitBounds(bounds, { padding: [50, 50] });
+        });
+    </script>
+    @endpush
 </x-layout.app-layout>

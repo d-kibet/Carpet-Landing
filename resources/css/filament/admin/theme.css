@@ -5,21 +5,18 @@
 
 /* Custom Admin Panel Theme - Warm Sunset Fusion */
 
-/* Beautiful warm sunset gradient background for login page */
+/* KingYna gradient background for login page */
 .fi-simple-layout {
     background: linear-gradient(135deg,
-        #fff5f0 0%,
-        #ffe8dc 20%,
-        #ffd4c8 40%,
-        #ffb89e 60%,
-        #ff9d7a 80%,
-        #ffb89e 100%
+        #1a2a6c 0%,
+        #b21f1f 50%,
+        #fdbb2d 100%
     );
     background-attachment: fixed;
     position: relative;
 }
 
-/* Add subtle warm pattern overlay with coral and peach tones */
+/* Subtle pattern overlay for login page */
 .fi-simple-layout::before {
     content: '';
     position: absolute;
@@ -28,10 +25,8 @@
     right: 0;
     bottom: 0;
     background-image:
-        radial-gradient(circle at 20% 50%, rgba(255, 127, 80, 0.18) 0%, transparent 50%),
-        radial-gradient(circle at 80% 80%, rgba(255, 160, 122, 0.15) 0%, transparent 50%),
-        radial-gradient(circle at 40% 20%, rgba(255, 99, 71, 0.12) 0%, transparent 50%),
-        radial-gradient(circle at 60% 60%, rgba(255, 140, 105, 0.10) 0%, transparent 50%);
+        radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.08) 0%, transparent 50%);
     pointer-events: none;
 }
 
@@ -72,29 +67,24 @@
     font-weight: 600 !important;
 }
 
-/* Main admin panel background - Warm peachy gradient */
+/* Main admin panel background - Light and clean */
 .fi-layout {
     background: linear-gradient(180deg,
-        oklch(0.98 0.03 45) 0%,
-        oklch(0.96 0.05 40) 100%
+        #f9fafb 0%,
+        #f3f4f6 100%
     );
 }
 
-/* Enhanced sidebar styling - Sunset warm gradient */
+/* Clean white sidebar */
 .fi-sidebar {
-    background: linear-gradient(180deg,
-        #fff7f3 0%,
-        #ffede5 30%,
-        #ffe4d9 60%,
-        #ffd9cc 100%
-    );
-    border-right: 1px solid rgba(255, 127, 80, 0.2);
-    box-shadow: 2px 0 16px rgba(255, 127, 80, 0.12);
+    background: #ffffff;
+    border-right: 1px solid #e5e7eb;
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.05);
 }
 
-/* Sidebar navigation items - Warm colors */
+/* Sidebar navigation items - Clean modern style */
 .fi-sidebar-nav-item {
-    color: oklch(0.40 0.08 30) !important;
+    color: #6b7280 !important;
     font-weight: 500;
     transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
     border-radius: 0.5rem;
@@ -102,34 +92,30 @@
 }
 
 .fi-sidebar-nav-item:hover {
-    background: linear-gradient(135deg,
-        #ffe0d1 0%,
-        #ffd4c1 100%
-    ) !important;
-    color: #9a3412 !important;
+    background: #f3f4f6 !important;
+    color: #111827 !important;
     transform: translateX(4px);
-    box-shadow: 0 2px 8px rgba(255, 127, 80, 0.2);
 }
 
 .fi-sidebar-nav-item.fi-active {
     background: linear-gradient(135deg,
-        #ff7f50 0%,
-        #ff6347 50%,
-        #ff8c69 100%
+        #1a2a6c 0%,
+        #b21f1f 50%,
+        #fdbb2d 100%
     ) !important;
     color: white !important;
     font-weight: 600;
-    box-shadow: 0 4px 12px rgba(255, 99, 71, 0.4);
+    box-shadow: 0 4px 12px rgba(26, 42, 108, 0.3);
 }
 
-/* Sidebar navigation icons - Warm orange tones */
+/* Sidebar navigation icons - Clean style */
 .fi-sidebar-nav-item-icon {
-    color: oklch(0.55 0.15 35) !important;
+    color: #9ca3af !important;
     transition: all 0.25s ease;
 }
 
 .fi-sidebar-nav-item:hover .fi-sidebar-nav-item-icon {
-    color: oklch(0.45 0.18 30) !important;
+    color: #111827 !important;
     transform: scale(1.1);
 }
 
@@ -137,9 +123,9 @@
     color: white !important;
 }
 
-/* Sidebar navigation groups - Warm accent */
+/* Sidebar navigation groups - Clean style */
 .fi-sidebar-nav-group-label {
-    color: oklch(0.50 0.14 32) !important;
+    color: #6b7280 !important;
     font-weight: 700;
     font-size: 0.75rem;
     text-transform: uppercase;
