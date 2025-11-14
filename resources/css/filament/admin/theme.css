@@ -153,6 +153,36 @@
     );
 }
 
+/* Main content area - ensure all text is dark and visible */
+.fi-main,
+.fi-page,
+.fi-content {
+    color: #111827 !important;
+}
+
+/* Page headings */
+.fi-header-heading,
+.fi-page h1,
+.fi-page h2,
+.fi-page h3 {
+    color: #111827 !important;
+    font-weight: 700 !important;
+}
+
+/* Stats widget text */
+.fi-wi-stats-overview-stat-label,
+.fi-wi-stats-overview-stat-value,
+.fi-stats-overview-stat-label,
+.fi-stats-overview-stat-value {
+    color: #111827 !important;
+}
+
+/* Section headings and text */
+.fi-section-header-heading,
+.fi-section-description {
+    color: #111827 !important;
+}
+
 /* Clean white sidebar */
 .fi-sidebar {
     background: #ffffff;
@@ -160,10 +190,10 @@
     box-shadow: 2px 0 8px rgba(0, 0, 0, 0.05);
 }
 
-/* Sidebar navigation items - Clean modern style */
+/* Sidebar navigation items - Clean modern style with darker text */
 .fi-sidebar-nav-item {
-    color: #6b7280 !important;
-    font-weight: 500;
+    color: #374151 !important;
+    font-weight: 600;
     transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
     border-radius: 0.5rem;
     margin: 0.125rem 0.5rem;
@@ -186,9 +216,9 @@
     box-shadow: 0 4px 12px rgba(26, 42, 108, 0.3);
 }
 
-/* Sidebar navigation icons - Clean style */
+/* Sidebar navigation icons - Darker icons */
 .fi-sidebar-nav-item-icon {
-    color: #9ca3af !important;
+    color: #4b5563 !important;
     transition: all 0.25s ease;
 }
 
@@ -201,9 +231,9 @@
     color: white !important;
 }
 
-/* Sidebar navigation groups - Clean style */
+/* Sidebar navigation groups - Darker labels */
 .fi-sidebar-nav-group-label {
-    color: #6b7280 !important;
+    color: #1f2937 !important;
     font-weight: 700;
     font-size: 0.75rem;
     text-transform: uppercase;
@@ -240,6 +270,20 @@
     backdrop-filter: blur(12px);
     border-bottom: 1px solid rgba(255, 127, 80, 0.2);
     box-shadow: 0 1px 3px rgba(255, 127, 80, 0.12);
+}
+
+/* Topbar text and icons - ensure visibility */
+.fi-topbar *,
+.fi-topbar-item,
+.fi-topbar button,
+.fi-topbar a {
+    color: #111827 !important;
+}
+
+/* User menu in topbar */
+.fi-dropdown-trigger,
+.fi-user-menu-trigger {
+    color: #111827 !important;
 }
 
 /* Card enhancements - Warm tint */
@@ -287,18 +331,27 @@
         oklch(0.95 0.07 38) 100%
     );
     font-weight: 600;
-    color: oklch(0.40 0.14 30);
+    color: #111827 !important;
     border-bottom: 2px solid rgba(255, 120, 60, 0.2);
+}
+
+/* Table body text */
+.fi-ta-cell,
+.fi-ta-text,
+.fi-table td {
+    color: #111827 !important;
 }
 
 .fi-ta-row:hover {
     background: oklch(0.98 0.03 45);
 }
 
-/* Form improvements - Warm labels */
-.fi-fo-field-wrp-label {
-    font-weight: 600;
-    color: oklch(0.40 0.12 32);
+/* Form improvements - Dark labels */
+.fi-fo-field-wrp-label,
+.fi-fo-label,
+label {
+    font-weight: 600 !important;
+    color: #111827 !important;
 }
 
 /* Input styling - Ensure visible text */
