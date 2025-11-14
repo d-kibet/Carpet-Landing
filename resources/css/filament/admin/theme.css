@@ -45,25 +45,84 @@
         0 0 0 1px rgba(255, 255, 255, 0.5);
 }
 
-/* Login form specific input styling */
+/* Login form specific input styling - Maximum specificity */
 .fi-simple-page input[type="email"],
-.fi-simple-page input[type="password"] {
+.fi-simple-page input[type="password"],
+.fi-simple-page .fi-input,
+.fi-simple-page input.fi-input,
+.fi-simple-layout input[type="email"],
+.fi-simple-layout input[type="password"],
+.fi-simple-layout .fi-input,
+.fi-simple-main input[type="email"],
+.fi-simple-main input[type="password"],
+.fi-simple-main .fi-input {
     color: #111827 !important;
     background-color: #ffffff !important;
     border: 2px solid #e5e7eb !important;
     padding: 0.75rem 1rem !important;
     font-size: 1rem !important;
+    -webkit-text-fill-color: #111827 !important;
+    -webkit-opacity: 1 !important;
+    opacity: 1 !important;
 }
 
+/* Autocomplete and autofill states */
+.fi-simple-page input:-webkit-autofill,
+.fi-simple-page input:-webkit-autofill:hover,
+.fi-simple-page input:-webkit-autofill:focus,
+.fi-simple-layout input:-webkit-autofill,
+.fi-simple-layout input:-webkit-autofill:hover,
+.fi-simple-layout input:-webkit-autofill:focus {
+    -webkit-text-fill-color: #111827 !important;
+    -webkit-box-shadow: 0 0 0px 1000px #ffffff inset !important;
+    box-shadow: 0 0 0px 1000px #ffffff inset !important;
+    border: 2px solid #e5e7eb !important;
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+/* Input focus states */
 .fi-simple-page input[type="email"]:focus,
-.fi-simple-page input[type="password"]:focus {
+.fi-simple-page input[type="password"]:focus,
+.fi-simple-page .fi-input:focus,
+.fi-simple-layout input[type="email"]:focus,
+.fi-simple-layout input[type="password"]:focus,
+.fi-simple-layout .fi-input:focus,
+.fi-simple-main input:focus {
     border-color: #ff7f50 !important;
     box-shadow: 0 0 0 3px rgba(255, 127, 80, 0.2) !important;
     outline: none !important;
+    color: #111827 !important;
+    -webkit-text-fill-color: #111827 !important;
 }
 
-.fi-simple-page label {
+/* Label styling */
+.fi-simple-page label,
+.fi-simple-layout label,
+.fi-simple-main label,
+.fi-simple-page .fi-fo-field-wrp-label,
+.fi-simple-layout .fi-fo-field-wrp-label {
     color: #374151 !important;
+    font-weight: 600 !important;
+}
+
+/* Remember me checkbox */
+.fi-simple-page input[type="checkbox"],
+.fi-simple-layout input[type="checkbox"] {
+    accent-color: #ff7f50 !important;
+}
+
+/* Login button */
+.fi-simple-page button[type="submit"],
+.fi-simple-layout button[type="submit"],
+.fi-simple-page .fi-btn-primary,
+.fi-simple-layout .fi-btn-primary {
+    background: linear-gradient(135deg,
+        #ff7f50 0%,
+        #ff6347 50%,
+        #e07856 100%
+    ) !important;
+    color: #ffffff !important;
+    border: none !important;
     font-weight: 600 !important;
 }
 
