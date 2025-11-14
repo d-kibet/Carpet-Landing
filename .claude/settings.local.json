@@ -1,11 +1,13 @@
 {
+  "permissions": {
+    "allow": [
+      "Bash(php artisan:*)",
+      "Bash(git add:*)",
+      "Bash(git commit -m \"$(cat <<''EOF''\nFix admin login form visibility on hosted environment\n\nEnhanced CSS specificity for login page inputs and labels to ensure\nconsistent rendering across local and hosted environments.\n\nChanges:\n- Added multiple selector variations for maximum specificity\n- Included webkit-specific text fill color properties\n- Added autofill state styling to prevent browser-induced visibility issues\n- Explicit styling for login button, labels, and checkbox\n- Rebuilt production assets with new theme CSS\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")"
+    ]
+  },
   "enableAllProjectMcpServers": true,
   "enabledMcpjsonServers": [
     "laravel-boost"
-  ],
-  "permissions": {
-    "allow": [
-      "Bash(php artisan:*)"
-    ]
-  }
+  ]
 }

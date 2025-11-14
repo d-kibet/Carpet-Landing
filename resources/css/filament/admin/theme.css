@@ -45,6 +45,25 @@
         0 0 0 1px rgba(255, 255, 255, 0.5);
 }
 
+/* Ensure all text in login page is dark and visible */
+.fi-simple-page *,
+.fi-simple-layout *,
+.fi-simple-main * {
+    color: #111827 !important;
+}
+
+/* Login page heading */
+.fi-simple-page h1,
+.fi-simple-page h2,
+.fi-simple-page .fi-simple-header-heading,
+.fi-simple-layout h1,
+.fi-simple-layout h2,
+.fi-simple-main h1,
+.fi-simple-main h2 {
+    color: #111827 !important;
+    font-weight: 700 !important;
+}
+
 /* Login form specific input styling - Maximum specificity */
 .fi-simple-page input[type="email"],
 .fi-simple-page input[type="password"],
