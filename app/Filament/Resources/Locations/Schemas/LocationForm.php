@@ -101,10 +101,10 @@ class LocationForm
                         FileUpload::make('featured_image')
                             ->label('Featured Image')
                             ->image()
-                            ->imageEditor()
                             ->directory('locations')
                             ->visibility('public')
                             ->helperText('Recommended size: 1200x800px')
+                            ->maxSize(5120)
                             ->columnSpanFull(),
 
                         RichEditor::make('description')

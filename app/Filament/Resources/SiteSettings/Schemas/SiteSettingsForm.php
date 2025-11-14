@@ -82,7 +82,6 @@ class SiteSettingsForm
                         FileUpload::make('value_image')
                             ->label('Image File')
                             ->image()
-                            ->imageEditor()
                             ->disk('public')
                             ->directory('site-settings')
                             ->visibility('public')

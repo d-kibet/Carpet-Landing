@@ -32,12 +32,6 @@ class GalleryItemForm
                         FileUpload::make('file_path')
                             ->label('Image')
                             ->image()
-                            ->imageEditor()
-                            ->imageEditorAspectRatios([
-                                '16:9',
-                                '4:3',
-                                '1:1',
-                            ])
                             ->disk('public')
                             ->directory('gallery')
                             ->visibility('public')

@@ -5,12 +5,11 @@
 
 /* Custom Admin Panel Theme - Warm Sunset Fusion */
 
-/* KingYna gradient background for login page */
+/* Summer gradient background for login page */
 .fi-simple-layout {
     background: linear-gradient(135deg,
-        #1a2a6c 0%,
-        #b21f1f 50%,
-        #fdbb2d 100%
+        #22C1C3 0%,
+        #FDBB2D 100%
     );
     background-attachment: fixed;
     position: relative;
@@ -107,8 +106,8 @@
 .fi-simple-layout input[type="password"]:focus,
 .fi-simple-layout .fi-input:focus,
 .fi-simple-main input:focus {
-    border-color: #ff7f50 !important;
-    box-shadow: 0 0 0 3px rgba(255, 127, 80, 0.2) !important;
+    border-color: #22C1C3 !important;
+    box-shadow: 0 0 0 3px rgba(34, 193, 195, 0.2) !important;
     outline: none !important;
     color: #111827 !important;
     -webkit-text-fill-color: #111827 !important;
@@ -127,18 +126,17 @@
 /* Remember me checkbox */
 .fi-simple-page input[type="checkbox"],
 .fi-simple-layout input[type="checkbox"] {
-    accent-color: #ff7f50 !important;
+    accent-color: #22C1C3 !important;
 }
 
-/* Login button */
+/* Login button - Summer gradient */
 .fi-simple-page button[type="submit"],
 .fi-simple-layout button[type="submit"],
 .fi-simple-page .fi-btn-primary,
 .fi-simple-layout .fi-btn-primary {
     background: linear-gradient(135deg,
-        #ff7f50 0%,
-        #ff6347 50%,
-        #e07856 100%
+        #22C1C3 0%,
+        #1da8aa 100%
     ) !important;
     color: #ffffff !important;
     border: none !important;
@@ -243,33 +241,33 @@
     padding: 0 1rem;
 }
 
-/* Sidebar brand/logo area - Warm header */
+/* Sidebar brand/logo area - Cool Summer header */
 .fi-sidebar-header {
     background: linear-gradient(135deg,
-        oklch(0.98 0.04 45) 0%,
-        oklch(0.96 0.06 40) 100%
+        rgba(34, 193, 195, 0.15) 0%,
+        rgba(34, 193, 195, 0.25) 100%
     );
-    border-bottom: 1px solid rgba(255, 120, 60, 0.12);
+    border-bottom: 1px solid rgba(34, 193, 195, 0.3);
     padding: 1.5rem 1rem;
 }
 
 .fi-sidebar-brand {
-    color: oklch(0.40 0.16 30) !important;
+    color: #111827 !important;
     font-weight: 700;
     font-size: 1.25rem;
-    text-shadow: 0 1px 2px rgba(255, 100, 50, 0.1);
+    text-shadow: none;
 }
 
-/* Topbar with warm sunset glass effect */
+/* Topbar with cool Summer glass effect */
 .fi-topbar {
     background: linear-gradient(135deg,
-        rgba(255, 250, 245, 0.9) 0%,
-        rgba(255, 244, 235, 0.9) 50%,
-        rgba(255, 237, 225, 0.9) 100%
+        rgba(34, 193, 195, 0.12) 0%,
+        rgba(34, 193, 195, 0.18) 50%,
+        rgba(34, 193, 195, 0.22) 100%
     );
     backdrop-filter: blur(12px);
-    border-bottom: 1px solid rgba(255, 127, 80, 0.2);
-    box-shadow: 0 1px 3px rgba(255, 127, 80, 0.12);
+    border-bottom: 1px solid rgba(34, 193, 195, 0.35);
+    box-shadow: 0 1px 3px rgba(34, 193, 195, 0.2);
 }
 
 /* Topbar text and icons - ensure visibility */
@@ -286,53 +284,51 @@
     color: #111827 !important;
 }
 
-/* Card enhancements - Warm tint */
+/* Card enhancements - Cool Summer tint */
 .fi-section,
 .fi-fo-field-wrp,
 .fi-ta-content {
-    background: rgba(255, 252, 248, 0.95);
+    background: rgba(34, 193, 195, 0.05);
     backdrop-filter: blur(8px);
-    border: 1px solid rgba(255, 150, 80, 0.08);
+    border: 1px solid rgba(34, 193, 195, 0.2);
 }
 
-/* Additional UI Enhancements - Warm coral to terracotta buttons */
+/* Additional UI Enhancements - Cool Summer gradient buttons */
 .fi-btn-primary {
     background: linear-gradient(135deg,
-        #ff7f50 0%,
-        #ff6347 50%,
-        #e07856 100%
+        #22C1C3 0%,
+        #1da8aa 100%
     );
     transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
     border: none;
-    box-shadow: 0 2px 8px rgba(255, 127, 80, 0.25);
+    box-shadow: 0 2px 8px rgba(34, 193, 195, 0.25);
 }
 
 .fi-btn-primary:hover {
     background: linear-gradient(135deg,
-        #ff6347 0%,
-        #ff4500 50%,
-        #d2691e 100%
+        #1da8aa 0%,
+        #188f91 100%
     );
     transform: translateY(-2px);
-    box-shadow: 0 6px 16px rgba(255, 99, 71, 0.4);
+    box-shadow: 0 6px 16px rgba(34, 193, 195, 0.4);
 }
 
-/* Table styling improvements - Warm headers */
+/* Table styling improvements - Cool Summer headers */
 .fi-ta-table {
     border-radius: 0.75rem;
     overflow: hidden;
-    box-shadow: 0 2px 8px rgba(255, 120, 60, 0.08);
-    border: 1px solid rgba(255, 150, 80, 0.1);
+    box-shadow: 0 2px 8px rgba(34, 193, 195, 0.15);
+    border: 1px solid rgba(34, 193, 195, 0.25);
 }
 
 .fi-ta-header-cell {
     background: linear-gradient(135deg,
-        oklch(0.97 0.05 42) 0%,
-        oklch(0.95 0.07 38) 100%
+        rgba(34, 193, 195, 0.15) 0%,
+        rgba(34, 193, 195, 0.25) 100%
     );
     font-weight: 600;
     color: #111827 !important;
-    border-bottom: 2px solid rgba(255, 120, 60, 0.2);
+    border-bottom: 2px solid rgba(34, 193, 195, 0.4);
 }
 
 /* Table body text */
@@ -343,7 +339,7 @@
 }
 
 .fi-ta-row:hover {
-    background: oklch(0.98 0.03 45);
+    background: rgba(34, 193, 195, 0.08);
 }
 
 /* Form improvements - Dark labels */
@@ -371,15 +367,15 @@ select {
     border: 1px solid #d1d5db !important;
 }
 
-/* Input focus states - Warm orange glow */
+/* Input focus states - Cool Summer teal glow */
 .fi-input:focus,
 .fi-select:focus,
 .fi-textarea:focus,
 input:focus,
 textarea:focus,
 select:focus {
-    border-color: oklch(0.60 0.18 35) !important;
-    box-shadow: 0 0 0 3px rgba(255, 120, 60, 0.15) !important;
+    border-color: #22C1C3 !important;
+    box-shadow: 0 0 0 3px rgba(34, 193, 195, 0.25) !important;
     color: #111827 !important;
 }
 
@@ -398,42 +394,42 @@ textarea::placeholder {
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
 }
 
-/* Stats widget cards - Warm gradient backgrounds */
+/* Stats widget cards - Cool Summer gradient backgrounds */
 .fi-wi-stats-overview-stat {
     background: linear-gradient(135deg,
-        oklch(0.98 0.03 45) 0%,
-        oklch(0.97 0.04 42) 100%
+        rgba(34, 193, 195, 0.12) 0%,
+        rgba(34, 193, 195, 0.18) 100%
     );
-    border: 1px solid rgba(255, 150, 80, 0.12);
+    border: 1px solid rgba(34, 193, 195, 0.3);
     transition: all 0.25s ease;
 }
 
 .fi-wi-stats-overview-stat:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(255, 100, 50, 0.15);
-    border-color: rgba(255, 120, 60, 0.25);
+    box-shadow: 0 8px 20px rgba(34, 193, 195, 0.3);
+    border-color: rgba(34, 193, 195, 0.5);
 }
 
-/* Notification badge - Warm accent */
+/* Notification badge - Summer accent */
 .fi-badge-notification {
-    background: oklch(0.60 0.20 30);
+    background: #22C1C3;
 }
 
-/* Scrollbar styling - Warm theme */
+/* Scrollbar styling - Cool theme */
 ::-webkit-scrollbar {
     width: 8px;
     height: 8px;
 }
 
 ::-webkit-scrollbar-track {
-    background: oklch(0.95 0.03 40);
+    background: #f3f4f6;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: oklch(0.75 0.12 35);
+    background: rgba(34, 193, 195, 0.4);
     border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: oklch(0.65 0.16 32);
+    background: rgba(34, 193, 195, 0.6);
 }

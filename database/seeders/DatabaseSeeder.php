@@ -15,12 +15,14 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // Create admin user for Filament
-        User::factory()->create([
-            'name' => 'Admin User',
-            'email' => 'admin@rahacarpetwash.com',
-            'password' => bcrypt('password'),
-        ]);
+        // Create admin user for Filament (or update if exists)
+        User::updateOrCreate(
+            ['email' => 'admin@rahacarpetwash.com'],
+            [
+                'name' => 'Admin User',
+                'password' => bcrypt('password'),
+            ]
+        );
 
         // Seed Rahacarpetwash data
         $this->call([

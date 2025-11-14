@@ -14,6 +14,9 @@ class RahaCarpetWashSeeder extends Seeder
 {
     public function run(): void
     {
+        // Seed Site Settings first
+        $this->call(SiteSettingsSeeder::class);
+
         // Create Services
         $carpetCleaning = Service::create([
             'name' => 'Carpet Cleaning',
