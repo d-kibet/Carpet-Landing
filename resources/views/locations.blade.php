@@ -297,14 +297,14 @@
             // Define locations with coordinates
             const locations = [
                 {
-                    name: 'Nairobi - Lang\'ata',
+                    name: "Nairobi - Lang'ata",
                     lat: -1.3523,
                     lng: 36.7176,
                     status: 'open',
-                    address: 'Lang\'ata, Nairobi',
+                    address: "Lang'ata, Nairobi",
                     phone: '0114440444',
                     hours: 'Mon-Sat: 8:00 AM - 6:00 PM',
-                    mapsUrl: '{{ $locations->firstWhere(\'city\', \'Nairobi\')?->google_maps_url ?? \'#\' }}'
+                    mapsUrl: "{{ $locations->where('city', 'Nairobi')->first()->google_maps_url ?? '#' }}"
                 },
                 {
                     name: 'Mombasa - Nyali',
