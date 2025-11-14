@@ -303,7 +303,7 @@
                     status: 'open',
                     address: "Lang'ata, Nairobi",
                     phone: '0114440444',
-                    hours: 'Mon-Sat: 8:00 AM - 6:00 PM',
+                    hours: 'Mon-Sat: 7:30 AM - 7:30 PM | Sun: 7:30 AM - 5:00 PM',
                     mapsUrl: "{{ $locations->where('city', 'Nairobi')->first()->google_maps_url ?? '#' }}"
                 },
                 {
