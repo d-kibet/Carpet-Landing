@@ -52,8 +52,10 @@
                     </div>
                     <div>
                         <p class="text-sm text-gray-400 mb-1">Operating Hours:</p>
-                        <p class="text-gray-300">Mon - Sun</p>
-                        <p class="text-gray-300">6:30 AM - 8:00 PM</p>
+                        <p class="text-gray-300">Mon - Sat</p>
+                        <p class="text-gray-300">7:30 AM - 7:30 PM</p>
+                        <p class="text-gray-300">Sun</p>
+                        <p class="text-gray-300">7:30 AM - 5:00 PM</p>
                     </div>
                     <div>
                         <a href="https://wa.me/254114440444" target="_blank" class="inline-flex items-center gap-2 text-green-400 hover:text-green-300 transition-colors">

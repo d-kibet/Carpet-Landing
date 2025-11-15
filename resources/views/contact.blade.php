@@ -278,8 +278,8 @@
                                 </svg>
                                 <div>
                                     <p class="font-medium text-gray-900">Operating Hours:</p>
-                                    <p class="text-gray-700">Monday - Saturday: 8:00 AM - 6:00 PM</p>
-                                    <p class="text-gray-700">Sunday: Closed</p>
+                                    <p class="text-gray-700">Monday - Saturday: 7:30 AM - 7:30 PM</p>
+                                    <p class="text-gray-700">Sunday: 7:30 AM - 5:00 PM</p>
                                 </div>
                             </div>
                         </div>
