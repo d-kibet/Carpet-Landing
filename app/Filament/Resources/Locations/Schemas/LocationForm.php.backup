@@ -26,13 +26,17 @@ class LocationForm
                                 TextInput::make('name')
                                     ->required()
                                     ->maxLength(255)
-                                    ->placeholder('Location name'),
+                                    ->placeholder('Location name')
+                                    ->live(onBlur: true)
+                                    ->afterStateUpdated(fn ($state, callable $set) => $set('slug', \Illuminate\Support\Str::slug($state))),
 
                                 TextInput::make('slug')
                                     ->required()
                                     ->maxLength(255)
                                     ->unique(ignoreRecord: true)
-                                    ->placeholder('location-slug'),
+                                    ->helperText('Auto-generated from name')
+                                    ->disabled()
+                                    ->dehydrated(),
                             ]),
 
                         Textarea::make('address')
@@ -52,6 +56,7 @@ class LocationForm
                                     ->label('Google Maps URL')
                                     ->url()
                                     ->placeholder('https://maps.google.com/...')
+                                    ->suffixIcon('heroicon-o-map-pin')
                                     ->helperText('For location map on website'),
                             ]),
                     ]),
@@ -64,13 +69,15 @@ class LocationForm
                                 TextInput::make('phone')
                                     ->tel()
                                     ->maxLength(20)
-                                    ->placeholder('+1 (555) 123-4567'),
+                                    ->placeholder('+1 (555) 123-4567')
+                                    ->prefixIcon('heroicon-o-phone'),
 
                                 TextInput::make('email')
                                     ->label('Email Address')
                                     ->email()
                                     ->maxLength(255)
-                                    ->placeholder('location@example.com'),
+                                    ->placeholder('location@example.com')
+                                    ->prefixIcon('heroicon-o-envelope'),
 
                                 TextInput::make('whatsapp')
                                     ->label('WhatsApp')
@@ -102,13 +109,18 @@ class LocationForm
 
                         RichEditor::make('description')
                             ->placeholder('Additional details about this location...')
+                            ->disableToolbarButtons([
+                                'attachFiles',
+                                'codeBlock',
+                            ])
                             ->columnSpanFull(),
 
                         Grid::make(3)
                             ->schema([
                                 DatePicker::make('opening_date')
                                     ->label('Opening Date')
-                                    ->helperText('When did/will this location open?'),
+                                    ->helperText('When did/will this location open?')
+                                    ->displayFormat('M d, Y'),
 
                                 TextInput::make('display_order')
                                     ->label('Display Order')

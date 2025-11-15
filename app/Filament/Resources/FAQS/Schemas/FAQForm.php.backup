@@ -23,12 +23,18 @@ class FAQForm
                             ->required()
                             ->maxLength(255)
                             ->placeholder('What is your question?')
+                            ->helperText('Enter a clear, concise question')
                             ->columnSpanFull(),
 
                         RichEditor::make('answer')
                             ->required()
                             ->placeholder('Provide a detailed answer...')
-                            ->columnSpanFull(),
+                            ->helperText('Use formatting to make the answer easy to read')
+                            ->columnSpanFull()
+                            ->disableToolbarButtons([
+                                'attachFiles',
+                                'codeBlock',
+                            ]),
                     ]),
 
                 Section::make('Organization')
@@ -45,6 +51,8 @@ class FAQForm
                                         'Booking' => 'Booking',
                                         'Other' => 'Other',
                                     ])
+                                    ->placeholder('Select a category')
+                                    ->searchable()
                                     ->default('General'),
 
                                 TextInput::make('display_order')
@@ -52,10 +60,12 @@ class FAQForm
                                     ->required()
                                     ->numeric()
                                     ->default(0)
-                                    ->minValue(0),
+                                    ->minValue(0)
+                                    ->helperText('Lower numbers appear first'),
 
                                 Toggle::make('is_active')
                                     ->label('Active')
+                                    ->helperText('Show on website')
                                     ->default(true)
                                     ->inline(false),
                             ]),

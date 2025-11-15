@@ -19,6 +19,7 @@ class RecentQuoteRequests extends TableWidget
         return $table
             ->query(
                 QuoteRequest::query()
+                    ->with('service')
                     ->latest()
                     ->limit(5)
             )
@@ -30,14 +31,13 @@ class RecentQuoteRequests extends TableWidget
 
                 TextColumn::make('email')
                     ->searchable()
-                    ->sortable()
-                    ->icon('heroicon-o-envelope'),
+                    ->sortable(),
 
                 TextColumn::make('phone')
-                    ->searchable()
-                    ->icon('heroicon-o-phone'),
+                    ->searchable(),
 
-                TextColumn::make('service')
+                TextColumn::make('service.name')
+                    ->label('Service')
                     ->searchable()
                     ->badge()
                     ->color('primary'),

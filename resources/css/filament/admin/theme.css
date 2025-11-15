@@ -158,6 +158,22 @@
     color: #111827 !important;
 }
 
+/* Page content panels - Clean white backgrounds */
+.fi-page-content,
+.fi-main-content,
+.fi-panel {
+    background: #ffffff !important;
+    border-radius: 0.75rem;
+}
+
+/* Resource pages - Clean white */
+.fi-resource-page,
+.fi-resource-edit-page,
+.fi-resource-create-page,
+.fi-resource-list-page {
+    background: transparent !important;
+}
+
 /* Page headings */
 .fi-header-heading,
 .fi-page h1,
@@ -284,13 +300,25 @@
     color: #111827 !important;
 }
 
-/* Card enhancements - Cool Summer tint */
+/* Card enhancements - Clean white backgrounds for readability */
 .fi-section,
-.fi-fo-field-wrp,
+.fi-fo-section,
+.fi-section-content {
+    background: #ffffff !important;
+    border: 1px solid #e5e7eb !important;
+    border-radius: 0.75rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+/* Form field wrappers - Clean white */
+.fi-fo-field-wrp {
+    background: transparent !important;
+}
+
+/* Table content area - Clean white */
 .fi-ta-content {
-    background: rgba(34, 193, 195, 0.05);
-    backdrop-filter: blur(8px);
-    border: 1px solid rgba(34, 193, 195, 0.2);
+    background: #ffffff !important;
+    border-radius: 0.75rem;
 }
 
 /* Additional UI Enhancements - Cool Summer gradient buttons */
@@ -319,6 +347,7 @@
     overflow: hidden;
     box-shadow: 0 2px 8px rgba(34, 193, 195, 0.15);
     border: 1px solid rgba(34, 193, 195, 0.25);
+    background: #ffffff !important;
 }
 
 .fi-ta-header-cell {
@@ -331,15 +360,32 @@
     border-bottom: 2px solid rgba(34, 193, 195, 0.4);
 }
 
-/* Table body text */
+/* Table body rows and cells */
+.fi-ta-row {
+    background: #ffffff !important;
+}
+
 .fi-ta-cell,
 .fi-ta-text,
 .fi-table td {
     color: #111827 !important;
+    background: transparent !important;
 }
 
 .fi-ta-row:hover {
-    background: rgba(34, 193, 195, 0.08);
+    background: rgba(34, 193, 195, 0.08) !important;
+}
+
+/* Table empty state */
+.fi-ta-empty-state,
+.fi-ta-empty-state-heading,
+.fi-ta-empty-state-description {
+    color: #111827 !important;
+    background: #ffffff !important;
+}
+
+.fi-ta-empty {
+    background: #ffffff !important;
 }
 
 /* Form improvements - Dark labels */
@@ -432,4 +478,177 @@ textarea::placeholder {
 
 ::-webkit-scrollbar-thumb:hover {
     background: rgba(34, 193, 195, 0.6);
+}
+
+/* ========================================
+   DARK MODE SUPPORT
+   ======================================== */
+
+.dark {
+    /* Main content text */
+    .fi-main,
+    .fi-page,
+    .fi-content,
+    .fi-header-heading,
+    .fi-page h1,
+    .fi-page h2,
+    .fi-page h3 {
+        color: #f9fafb !important;
+    }
+
+    /* Sidebar - keep it visible in dark mode */
+    .fi-sidebar {
+        background: #1f2937 !important;
+        border-right: 1px solid #374151 !important;
+    }
+
+    .fi-sidebar-brand {
+        color: #f9fafb !important;
+    }
+
+    .fi-sidebar-nav-item {
+        color: #d1d5db !important;
+    }
+
+    .fi-sidebar-nav-item:hover {
+        background: #374151 !important;
+        color: #f9fafb !important;
+    }
+
+    .fi-sidebar-nav-item-icon {
+        color: #9ca3af !important;
+    }
+
+    .fi-sidebar-nav-item:hover .fi-sidebar-nav-item-icon {
+        color: #f9fafb !important;
+    }
+
+    .fi-sidebar-nav-group-label {
+        color: #d1d5db !important;
+    }
+
+    /* Topbar dark mode */
+    .fi-topbar {
+        background: linear-gradient(135deg,
+            rgba(34, 193, 195, 0.15) 0%,
+            rgba(34, 193, 195, 0.25) 100%
+        ) !important;
+        border-bottom: 1px solid rgba(34, 193, 195, 0.4) !important;
+    }
+
+    .fi-topbar *,
+    .fi-topbar-item,
+    .fi-topbar button,
+    .fi-topbar a {
+        color: #f9fafb !important;
+    }
+
+    /* Table styling for dark mode */
+    .fi-ta-header-cell {
+        background: linear-gradient(135deg,
+            rgba(34, 193, 195, 0.2) 0%,
+            rgba(34, 193, 195, 0.3) 100%
+        ) !important;
+        color: #f9fafb !important;
+        border-bottom: 2px solid rgba(34, 193, 195, 0.5) !important;
+    }
+
+    .fi-ta-cell,
+    .fi-ta-text,
+    .fi-table td,
+    .fi-ta-text-item {
+        color: #f9fafb !important;
+    }
+
+    .fi-ta-row:hover {
+        background: rgba(34, 193, 195, 0.1) !important;
+    }
+
+    /* Form labels and text in dark mode */
+    .fi-fo-field-wrp-label,
+    .fi-fo-label,
+    label {
+        color: #f9fafb !important;
+    }
+
+    /* Section headings in dark mode */
+    .fi-section-header-heading,
+    .fi-section-description {
+        color: #f9fafb !important;
+    }
+
+    /* Stats widgets dark mode */
+    .fi-wi-stats-overview-stat-label,
+    .fi-wi-stats-overview-stat-value,
+    .fi-stats-overview-stat-label,
+    .fi-stats-overview-stat-value {
+        color: #f9fafb !important;
+    }
+
+    /* Input fields in dark mode */
+    .fi-input,
+    .fi-select,
+    .fi-textarea,
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="tel"],
+    input[type="number"],
+    input[type="url"],
+    textarea,
+    select {
+        color: #f9fafb !important;
+        background-color: #374151 !important;
+        border-color: #4b5563 !important;
+    }
+
+    /* Badges in dark mode */
+    .fi-badge {
+        color: #f9fafb !important;
+    }
+
+    /* Sections and content areas in dark mode */
+    .fi-section,
+    .fi-fo-section,
+    .fi-section-content {
+        background: #1f2937 !important;
+        border-color: #374151 !important;
+    }
+
+    /* Table content in dark mode */
+    .fi-ta-content,
+    .fi-ta-table {
+        background: #1f2937 !important;
+        border-color: #374151 !important;
+    }
+
+    .fi-ta-row {
+        background: #1f2937 !important;
+    }
+
+    /* Table empty state in dark mode */
+    .fi-ta-empty-state,
+    .fi-ta-empty-state-heading,
+    .fi-ta-empty-state-description,
+    .fi-ta-empty {
+        color: #f9fafb !important;
+        background: #1f2937 !important;
+    }
+
+    /* Page content panels in dark mode */
+    .fi-page-content,
+    .fi-main-content,
+    .fi-panel {
+        background: #1f2937 !important;
+    }
+
+    /* Background for main layout */
+    .fi-layout {
+        background: #111827 !important;
+    }
+
+    /* Ensure all text elements are visible */
+    * {
+        color: inherit;
+    }
 }
