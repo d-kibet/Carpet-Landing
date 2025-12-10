@@ -102,16 +102,16 @@ class RahaCarpetWashSeeder extends Seeder
             'service_id' => $carpetCleaning->id,
             'item_name' => 'Medium Carpet (6x8 ft to 8x10 ft)',
             'description' => 'Ideal for living rooms',
-            'price' => 1200,
+            'price' => 1500,
             'unit' => 'per_piece',
             'display_order' => 2,
         ]);
 
         PricingItem::create([
             'service_id' => $carpetCleaning->id,
-            'item_name' => 'Large Carpet (above 8x10 ft)',
+            'item_name' => 'Large Carpet (8x10 ft)',
             'description' => 'For large spaces',
-            'price' => 1800,
+            'price' => 2400,
             'unit' => 'per_piece',
             'display_order' => 3,
         ]);
