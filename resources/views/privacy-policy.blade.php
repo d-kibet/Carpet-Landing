@@ -390,7 +390,8 @@
                             <p><strong>Raha Express Carpet Wash & Laundry Services</strong></p>
                             <p><strong>Phone/WhatsApp:</strong> <a href="tel:0114440444" class="text-primary-600 font-semibold">0114440444</a></p>
                             <p><strong>Location:</strong> Langata, opposite Uhuru Gardens, Nairobi, Kenya</p>
-                            <p><strong>Service Hours:</strong> Monday - Sunday, 7:00 AM - 8:00 PM</p>
+                            <p><strong>Service Hours:</strong> Monday - Saturday, 7:30 AM - 7:30 PM</p>
+                            <p>Sunday, 7:30 AM - 5:00 PM</p>
                             <p class="mt-4 text-sm">We are committed to addressing your privacy concerns and will respond within 21 days.</p>
                         </div>
                     </div>
