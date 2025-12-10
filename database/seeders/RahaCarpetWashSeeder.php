@@ -57,7 +57,7 @@ class RahaCarpetWashSeeder extends Seeder
                 'Sunday' => '7:30 AM - 5:00 PM',
             ],
             'is_operational' => true,
-            'description' => 'Our flagship location in Lang\'ata, conveniently located opposite Uhuru Gardens with ample parking.',
+            'description' => 'Our flagship location, conveniently located opposite Uhuru Gardens with ample parking.',
             'display_order' => 1,
         ]);
 

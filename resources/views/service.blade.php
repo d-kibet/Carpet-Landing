@@ -480,7 +480,7 @@
                     </svg>
                     <span class="font-semibold">Uchumi Lang'ata, Opposite Uhuru Gardens</span>
                     <span class="text-orange-200">•</span>
-                    <span>Open 7 Days: 6:30 AM - 8:00 PM</span>
+                    <span>Open 7 Days: 7:30 AM - 7:30 PM</span>
                 </div>
             </div>
         </div>

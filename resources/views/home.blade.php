@@ -448,7 +448,7 @@
 
                             <h3 class="text-2xl font-bold mb-4 drop-shadow-lg">Drop Off</h3>
                             <p class="text-blue-100 text-base leading-relaxed drop-shadow">
-                                Bring your carpets to our Lang'ata location. We're open 7:30 AM - 7:30 PM daily.
+                                Bring your carpets to our Lang'ata location. We're open 7:30 AM - 7:30 PM .
                             </p>
                         </div>
                     </div>
@@ -698,7 +698,7 @@
                                 <svg class="w-6 h-6 text-blue-200 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                                 </svg>
-                                <span class="drop-shadow">Mon - Sun: 7:30 AM - 7:30 PM</span>
+                                <span class="drop-shadow">Mon - Sat: 7:30 AM - 7:30 PM</span>
                             </p>
                             <p class="flex items-center gap-3 text-white text-lg font-semibold">
                                 <svg class="w-6 h-6 text-blue-200 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
